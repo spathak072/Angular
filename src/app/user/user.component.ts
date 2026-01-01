@@ -9,7 +9,7 @@ import {DUMMY_USERS, randomUser} from "../DUMMY_USER";
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  selectedUser = DUMMY_USERS[randomUser];
+  selectedUser = DUMMY_USERS[randomUser()];
 
   get imagePath(){
     return 'assets/users/' + this.selectedUser.avatar;
@@ -17,5 +17,6 @@ export class UserComponent {
 
   onSelectedUser(){
     console.log('selectedUser');
+    this.selectedUser = DUMMY_USERS[randomUser()];
   }
 }

@@ -31,4 +31,4 @@ export const DUMMY_USERS = [
   },
 ];
 
-export const randomUser = Math.floor(Math.random() * DUMMY_USERS.length);
+export const randomUser=() => Math.floor(Math.random() * DUMMY_USERS.length);
